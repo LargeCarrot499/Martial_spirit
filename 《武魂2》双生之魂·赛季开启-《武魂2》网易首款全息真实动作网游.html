@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>《武魂2》双生之魂·赛季开启-《武魂2》网易首款全息真实动作网游</title>
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/1iconfont.css">
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        ul,
+        ol,
+        li,
+        p,
+        img,
+        input {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        li,
+        ol {
+            list-style: none;
+        }
+
+        img {
+            /* 低版本浏览器图片会有边框 */
+            border: none;
+            /* 图片自带下层3px左右 */
+            /* 设置文本垂直对齐方式 */
+            vertical-align: middle;
+        }
+
+        body {
+            /* height: 3000px; */
+            background: url(image/bg1.jpg) no-repeat center 54px, url(image/bg2.jpg) no-repeat center bottom;
+            background-color: #f2f6f9;
+            /* background-attachment: scroll; */
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .top {
+            min-width: 1200px;
+            height: 55px;
+            background-color: #fff;
+        }
+
+        .toc {
+            float: left;
+            width: 180px;
+            height: 54px;
+            background-color: #cf1132;
+            border-bottom: 1px solid #fff;
+            text-align: center;
+            line-height: 54px;
+        }
+
+        .toc h4 {
+            height: 54px;
+            background: url(image/mulu.png) no-repeat 28px 18px;
+            font-weight: 400;
+            color: #fff;
+            font-size: 12px;
+            line-height: 54px;
+        }
+
+        .tleft1 {
+            float: left;
+            width: 420px;
+            height: 54px;
+            background: url(image/qnyh.png) no-repeat right;
+        }
+
+        .tleft2 {
+            /* float: left; */
+            display: inline-block;
+            /* margin: 0 auto; */
+            margin-left: 125px;
+            width: 128px;
+            height: 54px;
+            background: url(image/wylogo.png) no-repeat right;
+
+        }
+
+        .tright2 {
+            text-align: center;
+            float: right;
+            width: 140px;
+            height: 54px;
+        }
+
+        .tright2 a {
+            display: block;
+            width: 100%;
+            height: 54px;
+            line-height: 54px;
+            font-size: 12px;
+            color: #7e7e7e;
+        }
+
+        .tright2 a:hover {
+            background-color: #f5f5f5;
+            color: #bc2e2e;
+            border-bottom: 1px solid #bc2e2e;
+        }
+
+        .tright1 {
+            /* transform: translate(0, -55px); */
+            overflow: hidden;
+            float: right;
+            width: 140px;
+            height: 54px;
+            /* border: 0 5px solid black; */
+            border-left: 1px solid #dadada;
+            border-right: 1px solid #dadada;
+
+        }
+
+        .tright1 a {
+            font-size: 12px;
+            line-height: 54px;
+            text-align: center;
+            display: block;
+            /* background-color: red; */
+            width: 100%;
+            height: 53px;
+            transition: transform 1s;
+            color: #7e7e7e;
+        }
+
+        /* 这里有过渡知识（重点） */
+        .tright1 a:hover {
+            background-color: #f5f5f5;
+            color: #bc2e2e;
+            border-bottom: 1px solid #bc2e2e;
+            /* transform: translate(0, -54px); */
+        }
+
+        /* 悬停轮播重要代码 */
+        .tright1:hover a {
+            transform: translate(0, -54px);
+        }
+
+        .content {
+            width: 1050px;
+            /* height: 2000px; */
+            margin: 0 auto;
+        }
+
+        .row1 {
+            position: relative;
+            /* width: 1020px; */
+            height: 708px;
+            /* margin: 0 auto; */
+            /* background: red; */
+        }
+
+        .row1 .logo {
+            /* display: block; */
+            position: absolute;
+            width: 150px;
+            height: 91px;
+            background: url(image/zuoshangjiao.png) no-repeat;
+            left: -116px;
+            top: 15px;
+        }
+
+        .row1 :nth-child(2),
+        .row1 :nth-child(3) {
+            position: absolute;
+            right: 42px;
+            width: 111px;
+            height: 30px;
+            font-size: 14px;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 3px;
+        }
+
+        .row1 :nth-child(2) {
+            top: 52px;
+            background: #eee5c8;
+            color: #504138;
+        }
+
+        .row1 :nth-child(2):hover {
+            background: #f8f0c4;
+            color: #807231;
+        }
+
+        .row1 :nth-child(3) {
+            top: 90px;
+            background: #bd3e3e;
+            color: #fff;
+        }
+
+        .row1 :nth-child(3):hover {
+            background: #e0d9d9;
+        }
+
+        .content .row2 {
+            height: 403px;
+            /* background-color: red; */
+        }
+
+        /* row2 盒子样式 -------------------------------------------*/
+        /* 使用background-position: 0 0;的时候一定要用像素px px px px px 今晚搞了几十分钟才搞定这个position */
+        .content .row2 .box {
+            width: 325px;
+            height: 403px;
+            background: #ededec;
+            float: left;
+        }
+
+        .content .row2 .center {
+            margin: 0 22px;
+        }
+
+        .content .row2 .box h3 {
+            height: 79px;
+            background: url(image/h123.png) no-repeat;
+            /* background-position: -327px 0; */
+        }
+
+        .content .row2 .center h3 {
+            /* position: absolute; */
+            background-position: -327px 0;
+        }
+
+        .content .row2 .right h3 {
+            background-position: -654px 0;
+        }
+
+        /* 表单样式--------------------------------------------------------------- */
+        .content .row2 .box div {
+            margin: 20px auto;
+            width: 245px;
+            height: 300px;
+        }
+
+        .content .row2 .box div form>input {
+            border: 1px solid #c5cddb;
+            display: block;
+            width: 240px;
+            height: 40px;
+            margin: 0 auto;
+            text-indent: 5px;
+            margin-bottom: 10px;
+        }
+
+        .content .row2 .box form label {
+            display: block;
+            color: #999999;
+            height: 50px;
+            font-size: 12px;
+            line-height: 16px;
+        }
+
+        .content .row2 .box form label input {
+            display: none;
+        }
+
+        .content .row2 .box form label span {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border: 1px solid;
+            border-radius: 2px;
+        }
+
+        .content .row2 .box form label input:checked+span {
+            background: url(image/check.png);
+        }
+
+        .content .row2 .box form label a {
+            color: #999;
+        }
+
+        .content .row2 .box form .next {
+            border: 1px solid #cdae70;
+            border-radius: 2px;
+            /* border-color: #cdae70; */
+            background-color: #f1d06c;
+        }
+
+        /* 下一步按钮事件 */
+        .content .row2 .box form .next:hover {
+            background-color: #cdb05b;
+        }
+
+        /* 中间盒子的样式 */
+        .content .row2 .center div {
+            width: 245px;
+            height: 300px;
+            margin: 20px auto;
+        }
+
+        .content .row2 .center div video {
+            width: 100%;
+            /* height: 50px; */
+        }
+
+        .content .row2 .center div button {
+
+            border: 1px solid;
+            border-radius: 2px;
+            width: 240px;
+            height: 40px;
+            display: block;
+        }
+
+        .content .row2 .center div :nth-child(2) {
+            color: #fff;
+            border: 1px solid #4e8992;
+            background-color: #486a9d;
+            margin: 22px 0 10px 0;
+        }
+
+        .content .row2 .center div :nth-child(2):hover {
+            background-color: #39547e;
+        }
+
+        .content .row2 .center div :nth-child(3) {
+            border-color: #cdae70;
+            background-color: #f1d06c;
+        }
+
+        .content .row2 .center div :nth-child(3):hover {
+            background-color: #cdb05b;
+        }
+
+        /* 右边盒子样式 */
+        .content .row2 .right div {
+            width: 260px;
+            height: 300px;
+            margin: 15px auto;
+        }
+
+        .content .row2 .right div button {
+            display: block;
+            margin-top: 20px;
+            width: 100%;
+            height: 40px;
+            /* border-color: #cdae70; */
+            background-color: #f1d06c;
+            border: 1px solid #cdae70;
+            border-radius: 2px;
+        }
+
+        .content .row2 .right div button:hover {
+            background-color: #cdb05b;
+        }
+
+        /* 全新资料片（无序列表精灵图） */
+        .content .row3 {
+            height: 670px;
+            margin-top: 50px;
+            /* background: green; */
+        }
+
+        .content .row3 h3 {
+            /* margin-top: 30px; */
+            width: 1050px;
+            height: 79px;
+            background: url(image/gift-title2_cdb4a23.jpg) no-repeat;
+        }
+
+        .content .row3 ul li {
+            /* position: relative; */
+            background: url(image/fab_z_4df6da7.png);
+            /* background-position: -206 0; */
+            /* background-color: pink; */
+            display: block;
+            margin-right: 12px;
+            margin-bottom: 12px;
+            float: left;
+            width: 194px;
+            height: 282px;
+        }
+
+        .content .row3 ul li:nth-child(1) {
+            background-position: -202px 0;
+        }
+
+        .content .row3 ul li:nth-child(2) {
+            background-position: -406px -294px;
+        }
+
+        .content .row3 ul li:nth-child(3) {
+            background-position: -406px 0;
+        }
+
+        .content .row3 ul li:nth-child(4) {
+            background-position: 0 -294px;
+        }
+
+        .content .row3 ul li:nth-child(5) {
+            background-position: -204px -294px;
+        }
+
+        .content .row3 ul li:nth-child(6) {
+            background-position: 0 0;
+        }
+
+        .content .row3 ul li:nth-child(7) {
+            background-position: -612px -294px;
+        }
+
+        .content .row3 ul li:nth-child(8) {
+            background-position: -816px 0;
+        }
+
+        .content .row3 ul li:nth-child(9) {
+            background-position: -816px -294px;
+        }
+
+        .content .row3 ul li:nth-child(10) {
+            background-position: 0 -588px;
+        }
+
+        .content .row3 ul li:hover span {
+            /* transition: ; */
+            width: 100%;
+            height: 100%;
+            display: block;
+            background: url(image/fab_z_4df6da7.png) -612px 0;
+            cursor: pointer;
+        }
+
+        /* 特色展示 */
+        .content .row4 {
+            height: 495px;
+            /* background: red; */
+        }
+
+        .content .row4 h3 {
+            height: 60px;
+            background: url(image/tszs_dc400a1.png) no-repeat;
+        }
+
+        .content .row4 .box {
+            /* float: left; */
+            width: 1020px;
+            height: 425px;
+            position: relative;
+        }
+
+        .content .row4 .box input {
+            width: 270px;
+            height: 85px;
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .content .row4 .box p {
+            /* float: left; */
+            width: 270px;
+            height: 85px;
+            background-color: #556275;
+        }
+
+        .content .row4 .box p span {
+            display: block;
+            width: 260px;
+            height: 84px;
+            text-align: center;
+            line-height: 84px;
+            color: #a6abb1;
+            font-size: 18px;
+            background: #445062;
+        }
+
+        .content .row4 .box input:checked+p {
+            background: #556275 url(image/features-icon_553282e.png) no-repeat 260px center;
+        }
+
+        .content .row4 .box input:checked+p span {
+            background: none;
+            color: #fae8a0;
+        }
+
+        .content .row4 .box ul {
+            /* float: left; */
+            width: clac(100%-270px);
+            height: 100%;
+            position: absolute;
+            left: 270px;
+            top: 0;
+            /* overflow: hidden; */
+        }
+
+        .content .row4 .box ul li {
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+
+        .content .row4 .box input:nth-child(1):checked~ul li:nth-child(1),
+        .content .row4 .box input:nth-child(3):checked~ul li:nth-child(2),
+        .content .row4 .box input:nth-child(5):checked~ul li:nth-child(3),
+        .content .row4 .box input:nth-child(7):checked~ul li:nth-child(4),
+        .content .row4 .box input:nth-child(9):checked~ul li:nth-child(5) {
+            display: block;
+        }
+
+        .sharebox {
+            height: 100%;
+            height: 40px;
+            margin-top: 30px;
+            background-color: rgba(0, 0, 0, .4);
+            /* background: green; */
+            /* position: absolute; */
+            bottom: 0;
+            left: 0;
+        }
+
+        .sharebox ul {
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        .sharebox ul li {
+            float: left;
+            line-height: 40px;
+            font-size: 14px;
+            padding: 0 10px;
+            color: #b7b198;
+        }
+
+        .sharebox ul li a {
+            color: #b7b198;
+        }
+
+        .sharebox ul li a span {
+            margin-right: 5px;
+        }
+
+        .sharebox ul li a:hover {
+            color: #fff;
+        }
+
+        /* 尾部样式 */
+        .footer {
+            height: 215px;
+            background: #272727;
+        }
+
+        .footer .footer-box {
+            font-size: 12px;
+            width: 950px;
+            height: 155px;
+            margin: 0 auto;
+            /* margin-top: 30px; */
+        }
+
+        .footer .footer-box .box {
+            height: 48px;
+        }
+
+        .footer .footer-box .box div {
+            float: left;
+        }
+
+        .footer .footer-box .box div ul {
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .footer .footer-box .box div ul li {
+            float: left;
+            color: #e23a3f;
+            padding-right: 5px;
+        }
+
+        .footer .footer-box .box div ul li a {
+            color: #e23a3f;
+            padding-right: 5px;
+        }
+
+        .footer .footer-box .box div span {
+            color: #e23a3f;
+        }
+
+        .footer .footer-box .box div:nth-child(2)>a {
+            position: relative;
+            background: #610000;
+            color: #fff;
+            left: 190px;
+            padding: 5px 10px;
+        }
+
+        .footer .footer-box .box div:nth-child(2) {
+            margin-top: 30px;
+        }
+
+        .footer .footer-box .box div:nth-child(2) a:hover {
+            text-decoration: underline;
+        }
+
+
+        /*  */
+        .footer .footer-box .box .img {
+            margin-top: 30px;
+            /* margin-bottom: 20px; */
+        }
+
+
+        .footer .footer-box .box .img a:nth-child(3) {
+            margin: 0 20px;
+        }
+
+        .footer .footer-box p,
+        .footer .footer-box p a {
+            color: #e23a3f;
+            line-height: 25px;
+        }
+
+        .footer .footer-box p a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 最顶部的块级父级元素 -->
+    <div class="top">
+        <!-- 游戏全目录块级元素 -->
+        <div class="toc">
+            <h4>游戏全目录</h4>
+        </div>
+        <!-- 倩女幽魂顶部块级元素 -->
+        <div class="tleft1">
+        </div>
+        <!-- 网易游戏logo块级元素 -->
+        <div class="tleft2">
+        </div>
+        <!-- 热点推荐 -->
+        <div class="tright2">
+            <a href="#">
+                <span class="iconfont icon-weibiaoti2fuzhi03"></span>热点推荐
+            </a>
+        </div>
+        <!-- 游戏充值 -->
+        <div class="tright1">
+            <a href="#">
+                游戏充值9.8折
+            </a>
+            <a href="#">
+                限时领取免费课程
+            </a>
+        </div>
+        <!-- <a href="#" class="move">
+           
+        </a> -->
+    </div>
+    <!-- 主要内容 -->
+    <div class="content">
+        <!-- 在中间制造一个相对盒子，用来定位其他小logo（重点） -->
+        <div class="row1">
+            <!-- 左上角武魂logo -->
+            <a href="#" class="logo"></a>
+            <!-- 右上角进入官网 -->
+            <a href="#" class="">进入官网</a>
+            <!-- 右上角下载游戏 -->
+            <a href="#" class="">下载游戏</a>
+        </div>
+        <!-- 以下是分清楚布局用的盒子 -->
+        <!-- 三盒子排列 -->
+        <div class="row2">
+            <!-- 左边盒子 -->
+            <div class="box">
+                <!-- 标签语义化，标题图片 -->
+                <h3></h3>
+                <!-- 表单盒子 -->
+                <div>
+                    <form action="" method="POST">
+                        <input type="text" placeholder="邮箱账号" />
+                        <input type="password" placeholder="6-16位密码，区分大小写" maxlength="16px" minlength="6px" />
+                        <label>
+                            <input type="checkbox" />
+                            <span></span>
+                            我同意
+                            <a href="#">《服务条款》</a>
+                            和
+                            <a href="#">《隐私保护和个人信息利用政策》</a>
+                        </label>
+                        <input class="next" type="submit" value="下一步" />
+                    </form>
+                </div>
+            </div>
+            <!-- 中间盒子 -->
+            <div class="box center">
+                <h3></h3>
+                <!-- 装视频的盒子 -->
+                <div>
+                    <video controls="controls"
+                        src="https://nie.v.netease.com/r/video/20200429/6c589203-3b2d-4ef1-877d-5aed526c8688.mp4"></video>
+                    <button>完整客户端下载（推荐）</button>
+                    <button>迷你客户端</button>
+                </div>
+            </div>
+            <!-- 右边盒子 -->
+            <div class="box right">
+                <h3></h3>
+                <!-- 装进我的🐎 -->
+                <div>
+                    <img src="image/horse.png" alt="" width="100%" />
+                    <button>立即领取典藏礼包</button>
+                </div>
+            </div>
+        </div>
+        <!-- 无序列表（10） 全新资料片-->
+        <div class="row3">
+            <h3></h3>
+            <ul>
+                <li><span></span></li>
+                <li><span></span></li>
+                <li><span></span></li>
+                <li><span></span></li>
+                <li><span></span></li>
+                <li><span></span></li>
+                <li><span></span></li>
+                <li><span></span></li>
+                <li><span></span></li>
+                <li><span></span></li>
+            </ul>
+        </div>
+        <!-- 特色展示 -->
+        <div class="row4">
+            <h3></h3>
+            <div class="box">
+                <input type="radio" name="wuhun" checked="checked" />
+                <p><span>全新系统 境界系统</span></p>
+                <input type="radio" name="wuhun" />
+                <p><span>全新赛季 八阵相争</span></p>
+                <input type="radio" name="wuhun" />
+                <p><span>全新赛季 无序挑战</span></p>
+                <input type="radio" name="wuhun" />
+                <p><span>核心系统 荣耀系统</span></p>
+                <input type="radio" name="wuhun" />
+                <p><span>全新福利 豪礼相送</span></p>
+                <ul>
+                    <li>
+                        <video width="100%" controls="controls"
+                            src="https://nie.v.netease.com/r/video/20200429/6c589203-3b2d-4ef1-877d-5aed526c8688.mp4"></video>
+                    </li>
+                    <li><img src="image/16_c54c720.jpg" alt=""></li>
+                    <li><img src="image/17_f2f2321.jpg" alt=""></li>
+                    <li><img src="image/18_c7bffda.jpg" alt=""></li>
+                    <li><img src="image/19_dddf51c.jpg" alt=""></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 分享 -->
+
+    </div>
+    <div class="sharebox">
+        <ul>
+            <li>分享到：</li>
+            <li><a href="#"><span class="iconfont icon-weixin1"></span>微信</a></li>
+            <li><a href="#"><span class="iconfont icon-weixin1"></span>易信</a></li>
+            <li><a href="#"><span class="iconfont icon-weibo"></span>微博</a></li>
+            <li><a href="#"><span class="iconfont icon-QQkongjian"></span>QQ空间</a></li>
+            <li><a href="#"><span class="iconfont icon-more"></span>更多</a></li>
+        </ul>
+    </div>
+    <!-- 尾部样式 -->
+    <div class="footer">
+        <div class="footer-box">
+            <div class="box">
+                <div class="img">
+                    <a href="#" id=""><img src="https://nie.res.netease.com/comm/NIE_copyRight/images/netease.1.png"
+                            alt=""></a>
+                    <a href="#" id=""><img src="https://nie.res.netease.com/comm/NIE_copyRight/images/nie.1.png"
+                            alt=""></a>
+                    <a href="#" id=""><img src="https://nie.res.netease.com/comm/NIE_copyRight/images/wen.png"
+                            alt=""></a>
+                </div>
+                <div>
+                    <ul>
+                        <li><a href="#">公司简介</a>-</li>
+                        <li><a href="#">客户服务</a>-</li>
+                        <li><a href="#">网易集团隐私政策及儿童个人信息保护规则</a>-</li>
+                        <li><a href="#">网易游戏</a>-</li>
+                        <li><a href="#">联系我们</a>-</li>
+                        <li><a href="#">商务合作</a>-</li>
+                        <li><a href="#">加入我们</a></li>
+                    </ul>
+                    <span>杭州网易雷火科技有限公司版权所有@1997-2020</span>
+                    <a href="#">点击查看家长关爱平台</a>
+                </div>
+                <p>本游戏适合16岁以上的玩家进入</p>
+                <p>积极健康的游戏心态是健康游戏的开端，本游戏故事情节设置紧凑，请您合理控制游戏时间，避免沉溺游戏影响生活，注意自我保护，防范网络陷阱。</p>
+                <p>
+                    <a href="#">《网络游戏管理暂行办法》</a>文网游备字(2013)C-RPG001号 《网络文化经营许可证》 浙网文[2019]1372-138号 新广出审[2016]1963号
+                    <a href="#"> 违法及不良信息举报中心</a>
+                </p>
+                <p>
+                    <a href="#">ICP备案：粤B2-20090191-18</a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
